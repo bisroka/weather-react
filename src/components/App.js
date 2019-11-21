@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Form from "./Form";
 import Result from "./Result";
+import Img from "./Img";
 import "./App.css";
 
 const APIKey = "3790fa34d346ad2608be38eca56077b2";
@@ -95,8 +96,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Form value={this.state.value} change={this.handleInputChange} />
-        {this.state.value ? <Result weather={this.state} /> : null}
+        <div className="textAndImg">
+          <div className="text">
+            <h1>Pogoda</h1>
+            <h2>Wpisz poniżej miasto, dla którego chcesz sprawdzić pogodę.</h2>
+            <h3>
+              Ze względu na wczesną wersję aplikacji musisz wpisać miasto
+              znajdujące się w Anglii. Drugim ograniczeniem jest wpisywanie ich
+              oryginalnych nazw (np. London zamiast Londyn). Powodzenia!
+            </h3>
+            <Form value={this.state.value} change={this.handleInputChange} />
+            {this.state.value ? <Result weather={this.state} /> : null}
+          </div>
+          <Img />
+        </div>
       </div>
     );
   }
