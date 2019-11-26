@@ -4,3 +4,8 @@
   border-bottom: 1px solid #3f5c66;
   border-bottom-color: groove;
 }
+@media (max-width: 1000px) {
+  .temperature {
+    display: none;
+  }
+}
