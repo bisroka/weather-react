@@ -1,7 +1,9 @@
+//this comp is a result of search
 import React from "react";
-import "./Result.css";
+import "../css/Result.css";
 
 const Result = props => {
+  //destructuring
   const {
     date,
     city,
@@ -14,6 +16,7 @@ const Result = props => {
   } = props.weather;
   let content = null;
   if (!err && city) {
+    //actually data and time
     const sunriseTime = new Date(sunrise * 1000).toLocaleTimeString();
     const sunsetTime = new Date(sunset * 1000).toLocaleTimeString();
 

@@ -1,3 +1,4 @@
+//this comp is a form when you can type a city
 import React from "react";
 
 const Form = props => {
